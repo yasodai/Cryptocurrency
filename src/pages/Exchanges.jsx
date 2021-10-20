@@ -28,9 +28,9 @@ function Accordion({
         <span className="col-span-2">{marketShare}%</span>
       </div>
       <div
-        className={`${
-          open && "max-h-screen py-4 "
-        } desc max-h-0 bg-white px-4 overflow-hidden ease duration-300  border-l border-r border-border `}
+        className={`desc bg-white px-4 overflow-hidden ease duration-150  border-l border-r border-border ${
+          open ? "py-4 max-h-screen " : "max-h-0"
+        } `}
       >
         {parser(description || "")}
       </div>
