@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply bg-bgSecondary;
+}
+
+.nav-container {
+  @apply w-full lg:w-[288px];
+  @apply fixed lg:inset-y-0 bg-black;
+}
+.logo-container {
+  @apply flex gap-4 p-7 text-white;
+
+  img {
+    @apply h-10 w-10;
+  }
+  a {
+    @apply text-3xl font-bold;
+    @apply transition-colors duration-300 hover:text-blue-700;
+  }
+}
+.menu {
+  @apply text-gray-400;
+  a {
+    @apply flex gap-3 p-3 font-bold;
+  }
+  .icon {
+    @apply transition-colors duration-300;
+  }
+  h5 {
+    @apply transition-colors duration-300;
+  }
+  .selected {
+    @apply bg-blue-400 text-white;
+  }
+}
+.desktop-menu {
+  @apply hidden lg:block;
+}
+
+.mobil-menu {
+  @apply absolute bg-black right-0 lg:hidden;
+}
+
+.main {
+  @apply flex-1 flex flex-col justify-between;
+  @apply lg:ml-[288px] mt-[96px] lg:mt-0;
+}
+
+.desc {
+  @apply space-y-4;
+  > p {
+    @apply text-[15px] text-gray-600 tracking-wide;
+    > a {
+      @apply text-blue-500;
+    }
+  }
+  > h3 {
+    @apply font-black;
+  }
+}
